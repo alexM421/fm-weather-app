@@ -1,0 +1,8 @@
+.home-layout{
+    background-color: var(--neutral-900);
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 48px 112px;
+    min-height: 100vh;
+}
