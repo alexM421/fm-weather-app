@@ -1,8 +1,16 @@
+//CSS
 import './App.css'
+//React
+import { Route, Routes } from 'react-router-dom'
+//layouts
+import HomeLayout from './layouts/HomeLayout/HomeLayout'
 
 function App() {
   return (
-    <h1>Test</h1>
+    <Routes>
+      <Route path="/" element={<HomeLayout/>}>
+      </Route>
+    </Routes>
   )
 }
 
