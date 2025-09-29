@@ -16,7 +16,7 @@ export default function useNavUnitsDropdown () {
     const [selectedUnits, setSelectedUnits] = useState<UnitsObject>({
         temperature: "Celsius (°C)",
         windspeed: "km/h",
-        precipitation: "millimeters (mm)"
+        precipitation: "Millimeters (mm)"
     })
 
     const selectorRef = useRef<HTMLButtonElement>(null)

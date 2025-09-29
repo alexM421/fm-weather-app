@@ -2,12 +2,14 @@
 import styles from "./NavUnitsDropdown.module.css"
 
 type NavUnitsSelectorType = {
+    showOptions: boolean,
     setShowOptions: React.Dispatch<React.SetStateAction<boolean>>
     ref: React.RefObject<HTMLButtonElement | null>
 }
 
-export default function NavUnitsSelector ({ setShowOptions, ref }: NavUnitsSelectorType) {
+export default function NavUnitsSelector ({ showOptions, setShowOptions, ref }: NavUnitsSelectorType) {
 
+    console.log(showOptions)
 
     return(
         <button 
@@ -16,7 +18,10 @@ export default function NavUnitsSelector ({ setShowOptions, ref }: NavUnitsSelec
         >
             <img src="/icon-units.svg"/>
             <p className="text-preset-7">Units</p>
-            <img src="/icon-dropdown.svg"/>
+            <img 
+                className={showOptions? styles["down"]:""}
+                src="/icon-dropdown.svg"
+            />
         </button>
     )
 }

@@ -8,7 +8,7 @@ type NavUnitsOption = {
     onClickHandler: (selectedUnit: string) => void,
 }
 
-export default function NavUnitsOption ({ legend, options, onClickHandler }:NavUnitsOption) {
+export default function NavUnitsOption ({ legend, options, value, onClickHandler }:NavUnitsOption) {
 
 
 
@@ -19,10 +19,14 @@ export default function NavUnitsOption ({ legend, options, onClickHandler }:NavU
                 {options.map(option => 
                     <button
                         key={`option-${option.split(" ")[0].toLowerCase()}`}
-                        className="text-preset-7"
                         onClick={() => onClickHandler(option)}
+                        className={value===option? styles["nav-units-option-selected"]:""}
                     >
-                        {option}
+                        <p className="text-preset-7">{option}</p>
+                        <img 
+                            src="/icon-checkmark.svg"
+                            style={{opacity: value===option? "1":"0"}}
+                        />
                     </button>
                 )}
             </div>

@@ -53,14 +53,19 @@
 
             &>button{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-between; 
                 align-items: center;
+                gap: 10px;
                 border-radius: 8px;
                 padding: 10px 8px;
                 background-color: var(--neutral-800);
                 color: var(--neutral-0);
                 transition: background-color 0.3s ease;
                 border: none;
+
+                &.nav-units-option-selected{
+                    background-color: var(--neutral-700);
+                }
 
                 &:hover{
                     cursor: pointer;
@@ -87,5 +92,14 @@
     &:hover{
         cursor: pointer;
         background-color: var(--neutral-700);
+    }
+
+    &>img:last-child{
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+
+        &.down{
+            transform: rotate(0deg);
+        }
     }
 }
